@@ -6,13 +6,16 @@ const Form = ({ todos, setTodos }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const addTodo = {
-      id: uuid(),
-      description: text,
-      isCompleted: false,
-    };
-    setTodos([...todos, addTodo]);
-    setText("");
+    if (text.trim() === "") alert("Cannot add an empty TODO");
+    else {
+      const addTodo = {
+        id: uuid(),
+        description: text,
+        isCompleted: false,
+      };
+      setTodos([...todos, addTodo]);
+      setText("");
+    }
   };
 
   const handleChange = (e) => {
@@ -32,6 +35,7 @@ const Form = ({ todos, setTodos }) => {
         className="button-primary two columns form__inp-btn"
         type="submit"
         value="Add"
+        id="inp-btn"
       />
     </form>
   );

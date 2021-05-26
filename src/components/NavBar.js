@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = ({ setPage }) => {
+const NavBar = ({ setPage, page }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setPage(e.target.text);
@@ -9,18 +9,28 @@ const NavBar = ({ setPage }) => {
   return (
     <nav className="row menu">
       <ul className="u-full-width menu__ul">
-        <li className="menu__ul-item">
-          <a href="a" onClick={handleClick} className="menu__ul-link">
+        <li
+          className={page === "All" ? "menu__ul-itemSelected" : "menu__ul-item"}
+        >
+          <a href="All" onClick={handleClick} className="menu__ul-link">
             All
           </a>
         </li>
-        <li className="menu__ul-item">
-          <a href="v" onClick={handleClick} className="menu__ul-link">
+        <li
+          className={
+            page === "Active" ? "menu__ul-itemSelected" : "menu__ul-item"
+          }
+        >
+          <a href="Active" onClick={handleClick} className="menu__ul-link">
             Active
           </a>
         </li>
-        <li className="menu__ul-item">
-          <a href="b" onClick={handleClick} className="menu__ul-link">
+        <li
+          className={
+            page === "Completed" ? "menu__ul-itemSelected" : "menu__ul-item"
+          }
+        >
+          <a href="Completed" onClick={handleClick} className="menu__ul-link">
             Completed
           </a>
         </li>

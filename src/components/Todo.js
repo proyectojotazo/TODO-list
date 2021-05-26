@@ -7,12 +7,12 @@ const Todo = ({ id, description, isCompleted, todos, setTodos }) => {
       description,
       isCompleted: e.target.checked,
     };
-    const oldTodos = todos.filter((todo) => todo.id !== id);
-    setTodos([...oldTodos, todoCompleted]);
+
+    setTodos(todos.map((todo) => (todo.id !== id ? todo : todoCompleted)));
   };
 
   return (
-    <div className="todo-wrapper u-full-width">
+    <>
       <input
         className="one column todosList__checkBox"
         type="checkbox"
@@ -29,7 +29,7 @@ const Todo = ({ id, description, isCompleted, todos, setTodos }) => {
           {description}
         </label>
       )}
-    </div>
+    </>
   );
 };
 

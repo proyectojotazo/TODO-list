@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 
 import Active from "./pages/Active";
@@ -6,6 +6,7 @@ import All from "./pages/All";
 import Completed from "./pages/Completed";
 
 function App() {
+
   const [todos, setTodos] = useState([]);
   const [page, setPage] = useState("All");
 
@@ -14,7 +15,7 @@ function App() {
       <div className="row">
         <h1 className="title u-full-width">#todo</h1>
       </div>
-      <NavBar setPage={setPage} />
+      <NavBar setPage={setPage} page={page} />
       {page === "All" ? (
         <All todos={todos} setTodos={setTodos} />
       ) : page === "Active" ? (

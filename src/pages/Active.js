@@ -11,10 +11,12 @@ const Active = ({ todos, setTodos }) => {
       <ul className="row todosList">
         {activeTodos.length !== 0 ? (
           activeTodos.map((todo) => (
-            <Todo key={todo.id} {...todo} todos={todos} setTodos={setTodos} />
+            <div key={todo.id} className="start todo-wrapper">
+              <Todo {...todo} todos={todos} setTodos={setTodos} />
+            </div>
           ))
         ) : (
-          <h3>No hay TODOS activos</h3>
+          <h3 className="title">No hay TODOS activos</h3>
         )}
       </ul>
     </>

@@ -10,10 +10,13 @@ const All = ({ todos, setTodos }) => {
       <ul className="row todosList">
         {todos.length !== 0 ? (
           todos.map((todo) => (
-            <Todo key={todo.id} {...todo} todos={todos} setTodos={setTodos} />
+            <div key={`${todo.id}All`} className="start todo-wrapper">
+              <Todo  {...todo} todos={todos} setTodos={setTodos} />
+            </div>
+            
           ))
         ) : (
-          <h3>No hay TODOS</h3>
+          <h3 className="title">No hay TODOS</h3>
         )}
       </ul>
     </>
