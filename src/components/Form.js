@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import uuid from "uuid/v4"
+import uuid from "uuid/v4";
 
 const Form = ({ todos, setTodos }) => {
+  const [text, setText] = useState("");
 
-  const [text, setText] = useState('')
-
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const addTodo = {
-      id:uuid(),
+      id: uuid(),
       description: text,
-      isCompleted: false
-    }
-    setTodos([...todos, addTodo])
-    setText('')
-  }
+      isCompleted: false,
+    };
+    setTodos([...todos, addTodo]);
+    setText("");
+  };
 
-  const handleChange = e => {
-    setText(e.target.value)
-  }
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
 
   return (
     <form className="row form" onSubmit={handleSubmit}>

@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 const NavBar = ({ setPage }) => {
-  
-
-  const handleClick = e => {
-    e.preventDefault()
-    setPage(e.target.text)
-  }
+  const handleClick = (e) => {
+    e.preventDefault();
+    setPage(e.target.text);
+  };
 
   return (
     <nav className="row menu">

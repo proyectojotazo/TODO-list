@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import './assets/css/normalize.css'
-import './assets/css/skeleton.css'
+import "./assets/css/normalize.css";
+import "./assets/css/skeleton.css";
 import "./index.css";
 import App from "./App";
 

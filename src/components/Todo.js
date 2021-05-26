@@ -1,15 +1,14 @@
 import React from "react";
 
 const Todo = ({ id, description, isCompleted, todos, setTodos }) => {
-
   const handleChange = (e) => {
     const todoCompleted = {
-        id,
-        description,
-        isCompleted:e.target.checked
-    }
-    const oldTodos = todos.filter(todo => todo.id !== id)
-    setTodos([...oldTodos, todoCompleted])
+      id,
+      description,
+      isCompleted: e.target.checked,
+    };
+    const oldTodos = todos.filter((todo) => todo.id !== id);
+    setTodos([...oldTodos, todoCompleted]);
   };
 
   return (

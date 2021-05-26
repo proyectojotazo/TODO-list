@@ -5,12 +5,9 @@ import Active from "./pages/Active";
 import All from "./pages/All";
 import Completed from "./pages/Completed";
 
-
 function App() {
   const [todos, setTodos] = useState([]);
   const [page, setPage] = useState("All");
-
-  
 
   return (
     <div className="container main-content">
