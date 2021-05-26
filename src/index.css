@@ -8,3 +8,61 @@
   src: url(./assets/fonts/Raleway-Regular.ttf);
 }
 
+.main-content{
+  font-family: Montserrat;
+}
+/* HEADER */
+
+.title{
+  margin-top: 2rem;
+  font-family: Raleway;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* MENU */
+
+.menu{
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  height: 30px;
+  max-width: 600px;
+}
+
+.menu__ul{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  list-style: none;
+  height: 100%;
+}
+
+.menu__ul-item{
+  width: 10rem;
+  height: 90%;
+  margin-bottom: 0;
+  text-align: center;
+  transition:all 200ms;
+}
+
+.menu__ul-item:hover{
+  border-bottom: 4px solid #48b;
+}
+
+.menu__ul-link{
+  color: rgba(51, 51, 51, 1);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FORM */
+
+.form{
+  padding-top: 1rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
