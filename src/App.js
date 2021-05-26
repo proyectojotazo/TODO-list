@@ -6,9 +6,18 @@ import All from "./pages/All";
 import Completed from "./pages/Completed";
 
 function App() {
+  let savedTodos =
+    window.sessionStorage.getItem("todos") === null
+      ? []
+      : JSON.parse(window.sessionStorage.getItem("todos"));
 
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(savedTodos);
   const [page, setPage] = useState("All");
+
+  useEffect(() => {
+    const session = JSON.stringify(todos);
+    window.sessionStorage.setItem("todos", session);
+  }, [todos]);
 
   return (
     <div className="container main-content">

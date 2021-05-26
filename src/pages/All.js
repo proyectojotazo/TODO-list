@@ -16,7 +16,7 @@ const All = ({ todos, setTodos }) => {
             
           ))
         ) : (
-          <h3 className="title">No hay TODOS</h3>
+          <h3 className="title">There are no TODOS. Create your own!</h3>
         )}
       </ul>
     </>

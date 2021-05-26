@@ -51,7 +51,7 @@ const Completed = ({ todos, setTodos }) => {
           </button>
         </>
       ) : (
-        <h3 className="title">No hay TODOS completados</h3>
+        <h3 className="title">There are no completed TODOS</h3>
       )}
     </ul>
   );

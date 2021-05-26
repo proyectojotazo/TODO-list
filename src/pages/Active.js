@@ -16,7 +16,7 @@ const Active = ({ todos, setTodos }) => {
             </div>
           ))
         ) : (
-          <h3 className="title">No hay TODOS activos</h3>
+          <h3 className="title">There are no active TODOS</h3>
         )}
       </ul>
     </>
