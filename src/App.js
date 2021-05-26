@@ -1,28 +1,30 @@
 import { useState } from "react";
-import Form from "./components/Form";
 import NavBar from "./components/NavBar";
-import Todo from "./components/Todo";
+
+import Active from "./pages/Active";
+import All from "./pages/All";
+import Completed from "./pages/Completed";
 
 
 function App() {
   const [todos, setTodos] = useState([]);
+  const [page, setPage] = useState("All");
+
+  
 
   return (
     <div className="container main-content">
       <div className="row">
         <h1 className="title u-full-width">#todo</h1>
       </div>
-      <NavBar />
-      <Form todos={todos} setTodos={setTodos} />
-      <ul className="row todosList">
-        {todos.length !== 0 ? (
-          todos.map((todo) => (
-            <Todo key={todo.id} {...todo} todos={todos} setTodos={setTodos} />
-          ))
-        ) : (
-          <h3>No hay TODOS</h3>
-        )}
-      </ul>
+      <NavBar setPage={setPage} />
+      {page === "All" ? (
+        <All todos={todos} setTodos={setTodos} />
+      ) : page === "Active" ? (
+        <Active todos={todos} setTodos={setTodos} />
+      ) : (
+        <Completed todos={todos} setTodos={setTodos} />
+      )}
     </div>
   );
 }

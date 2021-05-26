@@ -93,3 +93,9 @@
 .checked{
   text-decoration: line-through;
 }
+
+/* COMPLETED PAGE */
+
+.completed {
+  margin-top: 1rem;
+}

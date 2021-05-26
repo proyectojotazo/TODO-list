@@ -19,6 +19,7 @@ const Todo = ({ id, description, isCompleted, todos, setTodos }) => {
         type="checkbox"
         id={id}
         onChange={handleChange}
+        checked={isCompleted}
       />
       {isCompleted ? (
         <label className="todosList__label checked" htmlFor={id}>
